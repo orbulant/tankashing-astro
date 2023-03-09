@@ -1,18 +1,18 @@
 ---
-let pathname = new URL(Astro.request.url).pathname;
-let currentPath = pathname.slice(1);
+const currentPath = Astro.url.pathname;
 ---
 
 <nav>
   <span class="nav-title">ka-shing's awesome website!</span>
   <div class="links">
-    <a class={currentPath === "" ? "active" : ""} href="/">Home</a>
-    <a class={currentPath === "about" ? "active" : ""} href="/about">About Me</a
+    <a class={currentPath === "/" ? "active" : ""} href="/">Home</a>
+    <a class={currentPath === "/about" ? "active" : ""} href="/about"
+      >About Me</a
     >
-    <a class={currentPath === "portfolio" ? "active" : ""} href="/portfolio"
+    <a class={currentPath === "/portfolio" ? "active" : ""} href="/portfolio"
       >Portfolio</a
     >
-    <a class={currentPath === "contact" ? "active" : ""} href="/contact"
+    <a class={currentPath === "/contact" ? "active" : ""} href="/contact"
       >Contact Me</a
     >
   </div>

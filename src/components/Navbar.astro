@@ -3,6 +3,9 @@ const currentPath = Astro.url.pathname;
 ---
 
 <nav>
+  <h1>The current URL is: {Astro.url}</h1>
+  <h1>The current URL pathname is: {Astro.url.pathname}</h1>
+  <h1>The current URL origin is: {Astro.url.origin}</h1>
   <span class="nav-title">ka-shing's awesome website!</span>
   <div class="links">
     <a class={currentPath === "/" ? "active" : ""} href="/">Home</a>

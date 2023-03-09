@@ -1,0 +1,55 @@
+---
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1);
+---
+
+<nav>
+  <span class="nav-title">ka-shing's awesome website!</span>
+  <div class="links">
+    <a class={currentPath === "" ? "active" : ""} href="/">Home</a>
+    <a class={currentPath === "about" ? "active" : ""} href="/about">About Me</a
+    >
+    <a class={currentPath === "portfolio" ? "active" : ""} href="/portfolio"
+      >Portfolio</a
+    >
+    <a class={currentPath === "contact" ? "active" : ""} href="/contact"
+      >Contact Me</a
+    >
+  </div>
+</nav>
+
+<style>
+  nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    gap: 12px;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .nav-title {
+    font-weight: bold;
+    font-size: 32px;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .active {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+</style>

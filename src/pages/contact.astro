@@ -1,0 +1,57 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "animate.css";
+---
+
+<Layout title="Contact">
+  <main>
+    <h1 class="animate__animated animate__slideInDown">Contact Me</h1>
+    <h3>Click on the links below!</h3>
+    <div class="links">
+      <a href="https://www.youtube.com/channel/UCgNuAdhsibJ5PXng1_93Nng">
+        YouTube
+      </a>
+      <a href="https://www.linkedin.com/in/tankashing/"> LinkedIn</a>
+    </div>
+    <p class="animate__animated animate__fadeInUp">or.....</p>
+    <p class="animate__animated animate__fadeInUp">
+      you could write me an e-mail at "contact@tankashing.com"
+    </p>
+  </main>
+</Layout>
+
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    min-height: 70vh;
+  }
+
+  h3 {
+    font-weight: 400;
+  }
+
+  a {
+    border-radius: 32px;
+    background-color: #141414;
+    padding: 12px 20px;
+    width: 100px;
+    text-decoration: none;
+    color: white;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    color: #006797;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+</style>

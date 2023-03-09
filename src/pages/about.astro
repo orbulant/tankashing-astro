@@ -1,0 +1,34 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "animate.css";
+---
+
+<Layout title="About Me">
+  <main>
+    <h1 class="animate__animated animate__slideInDown">About Me</h1>
+    <p>Hey there! Let's be friends like Barney and friends! HAHA.</p>
+    <p>
+      I'm ISTJ-A in the MBTI test and "The Analyst - C" in the DISC test. If
+      that matters to anyone :O
+    </p>
+    <a href="https://www.linkedin.com/in/tankashing/"
+      >Click here to check out my resume in LinkedIn!</a
+    >
+  </main>
+</Layout>
+
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    min-height: 70vh;
+  }
+
+  a {
+    color: white;
+  }
+</style>

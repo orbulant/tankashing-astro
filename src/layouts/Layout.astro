@@ -22,12 +22,16 @@ const { title } = Astro.props;
     <Navbar />
     <div id="canvas"></div>
     <slot />
-    <footer>Made with ❤️ by Tan Ka-Shing.</footer>
+    <footer>
+      <button data-confetti-button>Made with ❤️ by Tan Ka-Shing.</button>
+    </footer>
   </body>
 
   <script hoist>
     import "../scripts/starfield.js";
+    import "../scripts/confetti.js";
   </script>
+
   <style is:global>
     :root {
       background-color: black;
@@ -50,6 +54,16 @@ const { title } = Astro.props;
       height: 48px;
       position: fixed;
       bottom: 0;
+    }
+
+    footer > button {
+      background: none;
+      color: inherit;
+      border: none;
+      padding: 0;
+      font: inherit;
+      cursor: pointer;
+      outline: inherit;
     }
 
     #canvas {

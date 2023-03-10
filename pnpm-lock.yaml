@@ -4,12 +4,14 @@ specifiers:
   '@astrojs/image': ^0.16.0
   animate.css: ^4.1.1
   astro: ^2.1.2
+  canvas-confetti: ^1.6.0
   three: ^0.150.1
 
 dependencies:
   '@astrojs/image': 0.16.0_astro@2.1.2
   animate.css: 4.1.1
   astro: 2.1.2
+  canvas-confetti: 1.6.0
   three: 0.150.1
 
 packages:
@@ -949,6 +951,10 @@ packages:
 
   /caniuse-lite/1.0.30001464:
     resolution: {integrity: sha512-oww27MtUmusatpRpCGSOneQk2/l5czXANDSFvsc7VuOQ86s3ANhZetpwXNf1zY/zdfP63Xvjz325DAdAoES13g==}
+    dev: false
+
+  /canvas-confetti/1.6.0:
+    resolution: {integrity: sha512-ej+w/m8Jzpv9Z7W7uJZer14Ke8P2ogsjg4ZMGIuq4iqUOqY2Jq8BNW42iGmNfRwREaaEfFIczLuZZiEVSYNHAA==}
     dev: false
 
   /ccount/2.0.1:

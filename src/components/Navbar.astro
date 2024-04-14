@@ -3,7 +3,7 @@ const currentPath = Astro.url.pathname;
 
 const home = "/";
 const about = "about";
-const portfolio = "portfolio";
+const resume = "resume";
 const contact = "contact";
 ---
 
@@ -15,8 +15,8 @@ const contact = "contact";
       >About Me</a
     >
     <a
-      class={currentPath.includes(portfolio) ? "active" : ""}
-      href={`/${portfolio}`}>Portfolio</a
+      class={currentPath.includes(resume) ? "active" : ""}
+      href={`/${resume}`}>My career history</a
     >
     <a
       class={currentPath.includes(contact) ? "active" : ""}

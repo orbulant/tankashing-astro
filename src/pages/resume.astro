@@ -1,0 +1,103 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "animate.css";
+
+const items = [
+  {
+    title: "SourceFlow",
+    description: "SourceFlow simplifies recruitment technology.",
+    roles: ["As Full Stack Developer, I work closely with the CTO to implement company wide product features and improvements."],
+    tech: "Tech Used: Ruby on Rails, React.js, TypeScript, JavaScript, Amazon Web Services (AWS), etc.",
+    link: "https://www.sourceflow.co.uk",
+  },
+  {
+    title: "Asia Pacific Net",
+    description: "Established since 1996, APN provides a wide range of internet solutions, including web development, digital marketing, and more.",
+    roles: ["As CTO, I oversaw serveral projects that increased the YoY revenue by 4.3% and to achieve Malaysian Digital Status."],
+    tech: "Tech Used: Astro.js, Next.js, Vercel, Shopify, WooCommerce, etc.",
+    link: "https://www.asiapacific.com.my",
+  },
+];
+---
+
+<Layout title="Portfolio">
+  <main>
+    <h1 class="animate__animated animate__slideInDown">What i'm up to currently:</h1>
+    <div class="content">
+      <div>
+        <a href="https://www.linkedin.com/in/tankashing/">Click here to check out my LinkedIn!</a>
+      </div>
+      {
+        items.map((i) => (
+          <div class="item">
+            <h2>{i.title}</h2>
+            <p class="description">{i.description}</p>
+            <ul>
+              {i.roles.map((r) => (
+                <li>{r}</li>
+              ))}
+            </ul>
+            <p class="stack">{i.tech}</p>
+            <a href={i.link} target="_blank">
+              Click here to visit!
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </main>
+</Layout>
+
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding-top: 8vh;
+    min-height: 80vh;
+    max-width: 800px;
+  }
+
+  h1 {
+    font-weight: bolder;
+  }
+
+  p {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  a {
+    color: white;
+  }
+
+  .stack {
+    font-weight: lighter;
+    font-size: 12px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .item {
+    background-color: #141414;
+    border-radius: 32px;
+    padding-bottom: 22px;
+    padding-right: 22px;
+    padding-left: 22px;
+  }
+
+  .description {
+    font-weight: lighter;
+  }
+
+  .italic {
+    font-style: italic;
+  }
+</style>
